@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="../../dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="flex">
+      <img src="../assets/img/login.svg" alt="login" class="h-screen" />
+      <div class="flex flex-col ml-80">
+        <img
+          src="../assets/img/logo-title.svg"
+          alt="logo"
+          class="mt-8 mb-24 w-72"
+        />
+        <form action="" class="w-96">
+          <div class="flex flex-col gap-1">
+            <label for="username" class="text-blue-600">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="bg-blue-100 text-blue-600 p-2 rounded-md focus:outline-blue-700"
+            />
+          </div>
+          <div class="flex flex-col gap-1 mt-12">
+            <label for="password" class="text-blue-600">Password</label>
+            <input
+              type="text"
+              id="password"
+              name="password"
+              class="bg-blue-100 text-blue-600 p-2 rounded-md focus:outline-blue-700"
+            />
+          </div>
+          <button
+            class="w-96 px-4 py-3 bg-blue-600 hover:bg-blue-500 text-white text-lg transition-colors rounded-md mt-16"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

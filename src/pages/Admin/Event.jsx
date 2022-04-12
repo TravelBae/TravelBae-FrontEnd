@@ -7,8 +7,8 @@ export default function Event(props) {
   return (
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
-        <div className="mx-10 mt-10">
-          <table className="table-auto text-center shadow-md overflow-hidden rounded-t-xl">
+        <div className="flex justify-center mx-10 mt-10">
+          <table className="table-auto w-full text-center shadow-lg overflow-hidden rounded-t-xl">
             <thead className="bg-gray-200">
               <tr className="border-b-2 border-gray-300">
                 {tableEventHeader.map((h, i) => {
@@ -37,7 +37,7 @@ export default function Event(props) {
                         return <td key={j}>{data}</td>;
                       }
                     })}
-                    <td>
+                    <td className="pr-4">
                       <div className="flex flex-col">
                         <Button
                           text={"Update"}

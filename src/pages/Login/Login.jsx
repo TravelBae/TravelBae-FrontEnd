@@ -19,7 +19,9 @@ export default function Login(props) {
     <div className="flex">
       <img src={login} alt="login" className="h-screen" />
       <div className="flex flex-col ml-80">
-        <img src={title} alt="logo" className="mt-8 mb-24 w-72" />
+        <div className="flex justify-center mx-10 mt-10">
+          <img src={title} alt="logo" className="mt-8 mb-24 w-72" />
+        </div>
         <form className="w-96">
           <Input
             name={"username"}

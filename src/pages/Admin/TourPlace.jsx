@@ -10,7 +10,7 @@ export default function TourPlace(props) {
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
         <div className="mx-10 mt-10">
-          <table className="table-auto text-center shadow-md overflow-hidden rounded-t-xl">
+          <table className="table-auto text-center shadow-lg overflow-hidden rounded-t-xl">
             <thead className="bg-gray-200">
               <tr className="border-b-2 border-gray-300">
                 {tableTourHeader.map((h, i) => {

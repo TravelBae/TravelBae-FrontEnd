@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/elements/PageHead render 1`] = `
+<header
+  className=""
+>
+  <Breadcrumbs
+    className=""
+    items={Array []}
+  />
+  <div>
+    <h4>
+      
+    </h4>
+    <div>
+      <Filters
+        filterOptions={Array []}
+        isTransactionFilter={false}
+      />
+      <Button
+        className=""
+        color="primary"
+        disabled={false}
+        fixed={false}
+        icon={<Plus />}
+        isLoading={false}
+        onClick={[Function]}
+        rounded={false}
+        size="medium"
+        to=""
+        type="button"
+        variant="filled"
+      >
+        Tambah
+      </Button>
+    </div>
+    
+  </div>
+  <div>
+    <div>
+      <img
+        alt="user"
+        src="/assets/img-empty.svg"
+      />
+      <h4>
+        test
+        <br />
+        <span />
+      </h4>
+    </div>
+  </div>
+</header>
+`;

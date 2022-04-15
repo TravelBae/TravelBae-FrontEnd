@@ -1,11 +1,16 @@
 import Layout from "../../components/Layout/Layout";
+import PageHead from '../../components/PageHead';
 import SidebarOwner from "../../components/Sidebar/SidebarOwner";
 import { tableReportHeader, tableReportData } from "../../MockData";
 
 export default function ReportOwner(props) {
+  const pageName = [{ name: 'Owner', url: '/' }, { name: 'Report' }];
   return (
     <>
       <Layout sidebar={<SidebarOwner />} mainClassName={"bg-neutral-100"}>
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName}/>
+        </div>
         <div className="flex justify-center mx-10 mt-10">
           <table className="table-auto w-full text-center shadow-lg overflow-hidden rounded-t-xl">
             <thead className="bg-gray-200">

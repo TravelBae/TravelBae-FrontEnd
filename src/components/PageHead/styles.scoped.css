@@ -1,0 +1,12 @@
+.root {
+  background-color: var(--white-color);
+  position: sticky;
+  top: 0;
+  
+}
+
+.root > div {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}

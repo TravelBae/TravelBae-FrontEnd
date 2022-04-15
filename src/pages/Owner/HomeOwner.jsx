@@ -1,11 +1,16 @@
 import Layout from "../../components/Layout/Layout";
+import PageHead from '../../components/PageHead';
 import { Icon } from "@iconify/react";
 import SidebarOwner from "../../components/Sidebar/SidebarOwner";
 
 export default function HomeOwner(props) {
+  const pageName = [{ name: 'Owner', url: '/' }, { name: 'Homepage' }];
   return (
     <>
       <Layout sidebar={<SidebarOwner />} mainClassName={"bg-neutral-100"}>
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName}/>
+        </div>
         <div className="xl:mx-20 2xl:mx-56 mt-10">
           <div className="flex justify-center">
             <div className="bg-blue-500 text-white rounded-3xl xl:w-[40em] xl:h-60 xl:px-10 xl:py-14 xl:text-3xl 2xl:w-[36em] 2xl:h-60 2xl:px-10 2xl:py-14 2xl:text-4xl">

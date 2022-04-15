@@ -1,0 +1,12 @@
+.root {
+  color: #000000;
+  display: flex;
+}
+
+.root > a {
+  color: #3C82F6;
+}
+
+.root > a:hover {
+  color: #92b7f6;
+}

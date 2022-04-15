@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import PageHead from '../../components/PageHead';
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Input from "../../components/Input/Input";
 import Dropdown from "../../components/Dropdown/Dropdown";
@@ -6,6 +7,7 @@ import Button from "../../components/Button/Button";
 import { useState } from "react";
 
 export default function UpdateData(props) {
+  const pageName = [{ name: 'Admin', url: '/tourplace' }, { name: 'Tour Place', url: '/tourplace' }, { name: 'Update' }];
   const [category, setCategory] = useState({
     val: null,
     text: "Choose category",
@@ -24,6 +26,9 @@ export default function UpdateData(props) {
   return (
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName}/>
+        </div>
         <div className="flex flex-col ml-10 mt-10 justify-center items-center text-blue-600">
           <div className=" text-3xl font-semibold text-black">Update Data</div>
           <form className="w-[60em]">

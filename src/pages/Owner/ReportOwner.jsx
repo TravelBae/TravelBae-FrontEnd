@@ -11,7 +11,7 @@ export default function ReportOwner(props) {
         <div className="flex bg-white py-5 px-20">
           <PageHead items={pageName}/>
         </div>
-        <div className="flex justify-center mx-10 mt-10">
+        <div className="flex justify-center mx-10 my-10">
           <table className="table-auto w-full text-center shadow-lg overflow-hidden rounded-t-xl">
             <thead className="bg-gray-200">
               <tr className="border-b-2 border-gray-300">
@@ -42,6 +42,7 @@ export default function ReportOwner(props) {
             </tbody>
           </table>
         </div>
+        
       </Layout>
     </>
   );

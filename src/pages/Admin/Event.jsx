@@ -1,12 +1,17 @@
 import Layout from "../../components/Layout/Layout";
+import PageHead from '../../components/PageHead';
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Button from "../../components/Button/Button";
 import { tableEventHeader, tableEventData } from "../../MockData";
 
 export default function Event(props) {
+  const pageName = [{ name: 'Admin', url: '/tourplace' }, { name: 'Event' }];
   return (
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName}/>
+        </div>
         <div className="flex justify-center mx-10 mt-10">
           <table className="table-auto w-full text-center shadow-lg overflow-hidden rounded-t-xl">
             <thead className="bg-gray-200">

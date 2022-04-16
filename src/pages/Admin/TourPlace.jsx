@@ -1,14 +1,19 @@
 import Layout from "../../components/Layout/Layout";
+import PageHead from '../../components/PageHead';
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Button from "../../components/Button/Button";
 import { tableTourHeader, tableTourData } from "../../MockData";
 import { useNavigate } from "react-router-dom";
 
 export default function TourPlace(props) {
+  const pageName = [{ name: 'Admin', url: '/tourplace' }, { name: 'Tour Place' }];
   const navigate = useNavigate();
   return (
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName}/>
+        </div>
         <div className="mx-10 mt-10">
           <table className="table-auto text-center shadow-lg overflow-hidden rounded-t-xl">
             <thead className="bg-gray-200">

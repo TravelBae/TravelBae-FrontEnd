@@ -168,7 +168,7 @@ export default function HomeOwner(props) {
                   md:text-xl md:w-14 md:h-14">
                     <Icon
                       icon="tabler:calendar-event"
-                      color="6b21a8"
+                      color="9a3412"
                       className="w-6 h-6 inline-block
                       2xl:text-4xl 2xl:w-12 2xl:h-12
                       xl:text-3xl xl:w-10 xl:h-10

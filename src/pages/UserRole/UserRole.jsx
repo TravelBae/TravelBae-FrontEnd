@@ -11,7 +11,9 @@ export default function UserRole(props) {
     <div className="flex">
       <img src={login} alt="login" className="h-screen" />
       <div className="flex flex-col ml-80">
-        <img src={logo} alt="logo" className="mt-8 mb-24 w-72" />
+        <div className="flex justify-center mx-10 mt-10">
+          <img src={logo} alt="logo" className="mt-8 mb-24 w-72" />
+        </div>
         <p className="text-4xl mb-16">Who are you? </p>
         <Button
           text={"Owner"}

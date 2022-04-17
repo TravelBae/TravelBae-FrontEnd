@@ -1,41 +1,54 @@
 import Layout from "../../components/Layout/Layout";
 import SidebarOwner from "../../components/Sidebar/SidebarOwner";
-import { tableReportHeader, tableReportData } from "../../MockData";
+import useGetTransactionReport from "../../hooks/useGetTransactionReport";
+import { tableReportHeader } from "../../MockData";
+import ReactLoading from "react-loading";
 
 export default function ReportOwner(props) {
+  const { transactionReport, loading, error } = useGetTransactionReport();
+
   return (
     <>
       <Layout sidebar={<SidebarOwner />} mainClassName={"bg-neutral-100"}>
-        <div className="flex justify-center mx-10 mt-10">
-          <table className="table-auto w-full text-center shadow-lg overflow-hidden rounded-t-xl">
-            <thead className="bg-gray-200">
-              <tr className="border-b-2 border-gray-300">
-                {tableReportHeader.map((h, i) => {
+        <div className="mx-10 mt-10">
+          {loading || error ? (
+            <ReactLoading
+              type={"spinningBubbles"}
+              color={"#A7C0FF"}
+              height={175}
+              width={175}
+              className="mx-auto mt-32"
+            />
+          ) : (
+            <table className="table-auto text-center shadow-md overflow-hidden rounded-t-xl">
+              <thead className="bg-gray-200">
+                <tr className="border-b-2 border-gray-300">
+                  {tableReportHeader.map((h, i) => {
+                    return (
+                      <th key={i} className="px-6 py-3">
+                        {h}
+                      </th>
+                    );
+                  })}
+                </tr>
+              </thead>
+              <tbody className="bg-white">
+                {transactionReport?.map((obj, i) => {
                   return (
-                    <th key={i} className="px-6 py-3">
-                      {h}
-                    </th>
+                    <tr className="border-b-2 border-gray-300" key={i}>
+                      {Object.values(obj).map((data, j) => {
+                        return (
+                          <td key={j} className="p-2">
+                            {data}
+                          </td>
+                        );
+                      })}
+                    </tr>
                   );
                 })}
-              </tr>
-            </thead>
-            <tbody className="bg-white">
-              {tableReportData.map((obj, i) => {
-                console.log(obj);
-                return (
-                  <tr className="border-b-2 border-gray-300" key={i}>
-                    {Object.values(obj).map((data, j) => {
-                      return (
-                        <td key={j} className="p-2 py-5">
-                          {data}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          )}
         </div>
       </Layout>
     </>

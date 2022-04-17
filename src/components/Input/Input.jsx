@@ -11,13 +11,16 @@ export default function Input({
   labelClassName,
   inputClassName,
   area = false,
+  register,
+  required,
+  requiredMsg,
 }) {
   return (
     <div className={`flex flex-col gap-1 mt-5 ${containerClassName}`}>
       <label htmlFor={name} className={`text-blue-600 pl-1 ${labelClassName}`}>
         {text}
       </label>
-      {area ? (
+      {register && area && (
         <textarea
           id={name}
           type={type || "text"}
@@ -26,8 +29,21 @@ export default function Input({
           disabled={disabled}
           className={` text-blue-600 p-2 rounded-md focus:outline-blue-700 ${inputClassName}`}
           rows="4"
-        ></textarea>
-      ) : (
+          {...register(name, { required: requiredMsg })}
+        />
+      )}
+      {register && !area && (
+        <input
+          id={name}
+          type={type || "text"}
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+          className={` text-blue-600 p-2 rounded-md focus:outline-blue-700 ${inputClassName}`}
+          {...register(name, { required: requiredMsg })}
+        />
+      )}
+      {!register && !disabled && (
         <input
           id={name}
           type={type || "text"}

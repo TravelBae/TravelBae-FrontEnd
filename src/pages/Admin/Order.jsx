@@ -1,6 +1,7 @@
 import Layout from "../../components/Layout/Layout";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Button from "../../components/Button/Button";
+import PageHead from "../../components/PageHead";
 import { tableOrderHeader } from "../../MockData";
 import useGetOrder from "../../hooks/useGetOrder";
 import ReactLoading from "react-loading";
@@ -8,6 +9,7 @@ import useConfirmOrder from "../../hooks/useConfirmOrder";
 import { useState, useEffect } from "react";
 
 export default function Order(props) {
+  const pageName = [{ name: "Admin", url: "/tourplace" }, { name: "Order" }];
   const { order, loading, error } = useGetOrder();
   const [waitConfirm, setWaitConfirm] = useState(false);
   const {
@@ -29,7 +31,10 @@ export default function Order(props) {
   return (
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
-        <div className="mx-10 mt-10">
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName} />
+        </div>
+        <div className="flex justify-center mx-10 mt-10">
           {loading || error ? (
             <ReactLoading
               type={"spinningBubbles"}
@@ -39,7 +44,7 @@ export default function Order(props) {
               className="mx-auto mt-32"
             />
           ) : (
-            <table className="table-auto text-center shadow-md overflow-hidden rounded-t-xl">
+            <table className="table-auto w-full text-center shadow-lg overflow-hidden rounded-t-xl">
               <thead className="bg-gray-200">
                 <tr className="border-b-2 border-gray-300">
                   {tableOrderHeader.map((h, i) => {
@@ -56,7 +61,11 @@ export default function Order(props) {
                   return (
                     <tr className="border-b-2 border-gray-300" key={i}>
                       {Object.values(obj).map((data, j) => {
-                        return <td key={j}>{data}</td>;
+                        return (
+                          <td className="py-5" key={j}>
+                            {data}
+                          </td>
+                        );
                       })}
                       <td>
                         {obj.orderStatus === "Unconfirmed" ? (

@@ -3,6 +3,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import Input from "../../components/Input/Input";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Button from "../../components/Button/Button";
+import PageHead from "../../components/PageHead";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { storage } from "../../firebase/config";
@@ -13,6 +14,7 @@ import ReactLoading from "react-loading";
 import { useNavigate } from "react-router-dom";
 
 export default function InputData(props) {
+  const pageName = [{ name: "Admin", url: "/tourplace" }, { name: "Input" }];
   const navigate = useNavigate();
   const {
     register,
@@ -108,6 +110,9 @@ export default function InputData(props) {
   return (
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName} />
+        </div>
         <div className="flex flex-col ml-10 mt-10 justify-center items-center text-blue-600">
           <div className=" text-3xl font-semibold text-black">Input Data</div>
           <form

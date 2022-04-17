@@ -1,6 +1,7 @@
 import Layout from "../../components/Layout/Layout";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Button from "../../components/Button/Button";
+import PageHead from "../../components/PageHead";
 import { tableEventHeader } from "../../MockData";
 import useGetEvent from "../../hooks/useGetEvent";
 import { useState, useEffect } from "react";
@@ -9,6 +10,7 @@ import ReactLoading from "react-loading";
 import useDeleteEvent from "../../hooks/useDeleteEvent";
 
 export default function Event(props) {
+  const pageName = [{ name: "Admin", url: "/tourplace" }, { name: "Event" }];
   const navigate = useNavigate();
   const [waitDel, setWaitDel] = useState(false);
   const { event, loading, error } = useGetEvent();
@@ -32,7 +34,10 @@ export default function Event(props) {
   return (
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
-        <div className="mx-10 mt-10">
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName} />
+        </div>
+        <div className="flex justify-center mx-10 mt-10">
           {loading || error ? (
             <ReactLoading
               type={"spinningBubbles"}
@@ -42,7 +47,7 @@ export default function Event(props) {
               className="mx-auto mt-32"
             />
           ) : (
-            <table className="table-auto text-center shadow-md overflow-hidden rounded-t-xl">
+            <table className="table-auto w-full text-center shadow-lg overflow-hidden rounded-t-xl">
               <thead className="bg-gray-200">
                 <tr className="border-b-2 border-gray-300">
                   {tableEventHeader.map((h, i) => {

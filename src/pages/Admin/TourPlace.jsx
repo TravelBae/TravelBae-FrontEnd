@@ -1,6 +1,7 @@
 import Layout from "../../components/Layout/Layout";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Button from "../../components/Button/Button";
+import PageHead from "../../components/PageHead";
 import { tableTourHeader } from "../../MockData";
 import { useNavigate } from "react-router-dom";
 import useGetTourPlace from "../../hooks/useGetTourPlace";
@@ -10,7 +11,10 @@ import ReactLoading from "react-loading";
 
 export default function TourPlace(props) {
   const navigate = useNavigate();
-
+  const pageName = [
+    { name: "Admin", url: "/tourplace" },
+    { name: "Tour Place" },
+  ];
   const [waitDel, setWaitDel] = useState(false);
   const { tourPlace, loading, error } = useGetTourPlace();
   const {
@@ -33,7 +37,10 @@ export default function TourPlace(props) {
   return (
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
-        <div className="mx-10 mt-10">
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName} />
+        </div>
+        <div className="flex justify-center mx-10 mt-10">
           {loading || error ? (
             <ReactLoading
               type={"spinningBubbles"}
@@ -43,8 +50,8 @@ export default function TourPlace(props) {
               className="mx-auto mt-32"
             />
           ) : (
-            <table className="table-auto text-center shadow-md overflow-hidden rounded-t-xl">
-              <thead className="bg-gray-200">
+            <table className="table-auto w-full text-center shadow-lg overflow-hidden rounded-t-xl">
+            <thead className="bg-gray-200">
                 <tr className="border-b-2 border-gray-300">
                   {tableTourHeader.map((h, i) => {
                     return (

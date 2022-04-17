@@ -3,6 +3,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import Input from "../../components/Input/Input";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import Button from "../../components/Button/Button";
+import PageHead from "../../components/PageHead";
 import { useEffect, useState } from "react";
 import { storage } from "../../firebase/config";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
@@ -12,6 +13,11 @@ import useGetDetailTourPlace from "../../hooks/useGetDetailTourPlace";
 import useUpdateTourPlace from "../../hooks/useUpdateTourPlace";
 
 export default function UpdateDataTourPlace(props) {
+  const pageName = [
+    { name: "Admin", url: "/tourplace" },
+    { name: "Tour Place", url: "/tourplace" },
+    { name: "Update" },
+  ];
   const navigate = useNavigate();
   const { id } = useParams("id");
 
@@ -118,6 +124,9 @@ export default function UpdateDataTourPlace(props) {
   return (
     <>
       <Layout sidebar={<Sidebar />} mainClassName={"bg-neutral-100"}>
+        <div className="flex bg-white py-5 px-20">
+          <PageHead items={pageName} />
+        </div>
         <div className="flex flex-col ml-10 mt-10 justify-center items-center text-blue-600">
           <div className=" text-3xl font-semibold text-black">Update Data</div>
           <form id="input-form" className="w-[60em]" onSubmit={submitHandler}>

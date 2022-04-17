@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import login from "../../assets/img/login.svg";
 import logo from "../../assets/img/logo-title.svg";
 import Button from "../../components/Button/Button";
-import Login from "../Login/Login";
 
 export default function UserRole(props) {
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ export default function UserRole(props) {
           className={"w-96"}
           hoverColor={"hover:bg-blue-800"}
           onClick={() => {
-            temp = 1;
+            temp = 2;
             navigate("/login", { state: temp });
           }}
         />
@@ -30,7 +29,7 @@ export default function UserRole(props) {
           }
           hoverColor={"hover:bg-blue-800 hover:text-white"}
           onClick={() => {
-            temp = 2;
+            temp = 1;
             navigate("/login", { state: temp });
           }}
         />

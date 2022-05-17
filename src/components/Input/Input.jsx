@@ -1,5 +1,7 @@
 import React from "react";
 
+// Fungsi ini untuk membuat komponen input
+// parameter yang ada didalamnya merupakan props yang bisa diturunkan kedalam komponen ini
 export default function Input({
   name,
   text,

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useCookies } from "react-cookie";
 
+// Fungsi ini untuk meng-consume API delete event untuk admin dari backend
 export default function useDeleteEvent() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

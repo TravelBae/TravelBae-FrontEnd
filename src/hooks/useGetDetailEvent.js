@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
+// Fungsi ini untuk meng-consume API get detail event untuk admin dari backend
+//parameter yang ada didalamnya merupakan id dari event
 export default function useGetDetailevent(id) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

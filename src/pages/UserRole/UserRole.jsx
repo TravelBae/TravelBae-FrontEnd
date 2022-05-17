@@ -3,7 +3,8 @@ import landing from "../../assets/img/landing.svg";
 import logo from "../../assets/img/logo-title.svg";
 import Button from "../../components/Button/Button";
 
-export default function UserRole(props) {
+// Fungsi ini untuk membuat halaman user role
+export default function UserRole() {
   const navigate = useNavigate();
   let temp;
 

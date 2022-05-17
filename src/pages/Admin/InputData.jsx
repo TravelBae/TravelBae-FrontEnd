@@ -13,7 +13,8 @@ import useCreateEvent from "../../hooks/useCreateEvent";
 import ReactLoading from "react-loading";
 import { useNavigate } from "react-router-dom";
 
-export default function InputData(props) {
+// Fungsi ini untuk membuat halaman input data untuk admin
+export default function InputData() {
   const pageName = [{ name: "Admin", url: "/tourplace" }, { name: "Input" }];
   const navigate = useNavigate();
   const {

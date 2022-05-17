@@ -5,7 +5,8 @@ import useGetTransactionReport from "../../hooks/useGetTransactionReport";
 import { tableReportHeader } from "../../MockData";
 import ReactLoading from "react-loading";
 
-export default function ReportOwner(props) {
+// Fungsi ini untuk membuat halaman report owner
+export default function ReportOwner() {
   const pageName = [{ name: "Owner", url: "/" }, { name: "Report" }];
   const { transactionReport, loading, error } = useGetTransactionReport();
 

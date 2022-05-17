@@ -7,7 +7,8 @@ import { useForm } from "react-hook-form";
 import useLogin from "../../hooks/useLogin";
 import ReactLoading from "react-loading";
 
-export default function Login(props) {
+// Fungsi ini untuk membuat halaman login
+export default function Login() {
   const { state } = useLocation();
 
   const {

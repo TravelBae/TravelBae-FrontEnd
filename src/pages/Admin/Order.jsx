@@ -8,7 +8,8 @@ import ReactLoading from "react-loading";
 import useConfirmOrder from "../../hooks/useConfirmOrder";
 import { useState, useEffect } from "react";
 
-export default function Order(props) {
+// Fungsi ini untuk membuat halaman order untuk admin
+export default function Order() {
   const pageName = [{ name: "Admin", url: "/tourplace" }, { name: "Order" }];
   const { order, loading, error } = useGetOrder();
   const [waitConfirm, setWaitConfirm] = useState(false);

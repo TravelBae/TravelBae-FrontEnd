@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import { NavLink } from "react-router-dom";
 import useLogout from "../../hooks/useLogout";
 
+// Fungsi ini untuk membuat komponen sidebar untuk owner
 export default function SidebarOwner() {
   const { logout, loading, error } = useLogout();
 

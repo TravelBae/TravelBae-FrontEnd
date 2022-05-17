@@ -1,6 +1,7 @@
 import { Outlet, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+// Fungsi ini untuk membuat public route agar semua role bisa mengaksesnya
 function PublicRoute() {
   const role = useSelector((state) => state.user.data.role_id);
   const isLogin = useSelector((state) => state.user.data.isLogin);

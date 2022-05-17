@@ -9,7 +9,8 @@ import { useNavigate } from "react-router-dom";
 import ReactLoading from "react-loading";
 import useDeleteEvent from "../../hooks/useDeleteEvent";
 
-export default function Event(props) {
+// Fungsi ini untuk membuat halaman event untuk admin
+export default function Event() {
   const pageName = [{ name: "Admin", url: "/tourplace" }, { name: "Event" }];
   const navigate = useNavigate();
   const [waitDel, setWaitDel] = useState(false);

@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
+// Fungsi ini untuk meng-consume API get detail tour place untuk admin dari backend
+//parameter yang ada didalamnya merupakan id dari tour place
 export default function useGetDetailTourPlace(id) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

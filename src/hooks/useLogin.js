@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setData } from "../components/store/userSlice";
 
+// Fungsi ini untuk meng-consume API login dari backend
 export default function useLogin() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);

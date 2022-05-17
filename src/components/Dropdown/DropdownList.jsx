@@ -1,5 +1,7 @@
 import React from "react";
 
+// Fungsi ini untuk membuat isi list yang berada pada komponen dropdown
+// parameter yang ada didalamnya merupakan props yang bisa diturunkan kedalam komponen ini
 export default function DropdownList({ onClick, data, className }) {
   return (
     <li

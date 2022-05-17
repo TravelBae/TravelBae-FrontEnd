@@ -9,7 +9,8 @@ import useDeleteTourPlace from "../../hooks/useDeleteTourPlace";
 import { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
 
-export default function TourPlace(props) {
+// Fungsi ini untuk membuat halaman tour palce untuk admin
+export default function TourPlace() {
   const navigate = useNavigate();
   const pageName = [
     { name: "Admin", url: "/tourplace" },

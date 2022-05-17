@@ -1,6 +1,7 @@
 import { Outlet, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+// Fungsi ini untuk membuat private route owner
 function PrivateRouteOwner() {
   const role = useSelector((state) => state.user.data.role_id);
   const isLogin = useSelector((state) => state.user.data.isLogin);

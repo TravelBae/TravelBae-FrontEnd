@@ -4,6 +4,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { setData } from "../components/store/userSlice";
 
+// Fungsi ini untuk meng-consume API logout dari backend
 export default function useLogout() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);

@@ -1,6 +1,8 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
+// Fungsi ini untuk membuat komponen button
+// parameter yang ada didalamnya merupakan props yang bisa diturunkan kedalam komponen ini
 export default function Button({
   text,
   className,

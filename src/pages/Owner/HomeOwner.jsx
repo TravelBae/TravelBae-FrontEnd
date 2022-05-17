@@ -5,7 +5,8 @@ import SidebarOwner from "../../components/Sidebar/SidebarOwner";
 import useGetFullReport from "../../hooks/useGetFullReport";
 import ReactLoading from "react-loading";
 
-export default function HomeOwner(props) {
+// Fungsi ini untuk membuat halaman homepage owner
+export default function HomeOwner() {
   const pageName = [{ name: "Owner", url: "/" }, { name: "Homepage" }];
   const { fullReport, loading, error } = useGetFullReport();
 

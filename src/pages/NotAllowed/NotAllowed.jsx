@@ -3,6 +3,7 @@ import Button from "../../components/Button/Button";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
+// Fungsi ini untuk membuat halaman restrict access
 export default function NotAllowed() {
   const role = useSelector((state) => state.user.data.role_id);
   const navigate = useNavigate();

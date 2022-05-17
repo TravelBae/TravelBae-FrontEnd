@@ -12,7 +12,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import useGetDetailEvent from "../../hooks/useGetDetailEvent";
 import useUpdateEvent from "../../hooks/useUpdateEvent";
 
-export default function UpdateDataEvent(props) {
+// Fungsi ini untuk membuat halaman update event untuk admin
+export default function UpdateDataEvent() {
   const pageName = [
     { name: "Admin", url: "/tourplace" },
     { name: "Event", url: "/event" },

@@ -12,7 +12,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import useGetDetailTourPlace from "../../hooks/useGetDetailTourPlace";
 import useUpdateTourPlace from "../../hooks/useUpdateTourPlace";
 
-export default function UpdateDataTourPlace(props) {
+// Fungsi ini untuk membuat halaman update tour place untuk admin
+export default function UpdateDataTourPlace() {
   const pageName = [
     { name: "Admin", url: "/tourplace" },
     { name: "Tour Place", url: "/tourplace" },

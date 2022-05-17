@@ -22,6 +22,7 @@ import { setData } from "./components/store/userSlice";
 import ReactLoading from "react-loading";
 import UpdateDataEvent from "./pages/Admin/UpdateDataEvent";
 
+//fungsi ini ada root yang akan memanggil semua halaman yang telah dibuat
 function App() {
   const [cookies, setCookies] = useCookies(["token"]);
   const [loading, setLoading] = useState(true);

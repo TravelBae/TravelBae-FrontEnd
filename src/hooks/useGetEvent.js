@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
+// Fungsi ini untuk meng-consume API get all event untuk admin dari backend
 export default function useGetEvent() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

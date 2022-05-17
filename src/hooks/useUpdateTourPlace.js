@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useCookies } from "react-cookie";
 
+// Fungsi ini untuk meng-consume API update tour place untuk admin dari backend
+//parameter yang ada didalamnya merupakan id dari tour place
 export default function useUpdateTourPlace(id) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

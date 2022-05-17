@@ -2,6 +2,8 @@ import { useState } from "react";
 import down from "../../assets/icon/down.svg";
 import DropdownList from "./DropdownList";
 
+// Fungsi ini untuk membuat komponen Dropdown
+// parameter yang ada didalamnya merupakan props yang bisa diturunkan kedalam komponen ini
 export default function Dropdown({
   text,
   name,

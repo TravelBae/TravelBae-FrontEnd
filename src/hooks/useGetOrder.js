@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
+// Fungsi ini untuk meng-consume API get all order untuk admin dari backend
 export default function useGetOrder() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './styles.scoped.css';
 
+// Fungsi ini untuk membuat komponen Breadcrumbs
+// parameter yang ada didalamnya merupakan props yang bisa diturunkan kedalam komponen ini
 export default function Breadcrumbs({ className, items }) {
   const classes = [styles.root, className].filter(Boolean).join(' ');
 

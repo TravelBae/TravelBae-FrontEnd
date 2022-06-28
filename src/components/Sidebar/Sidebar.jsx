@@ -1,8 +1,8 @@
-import React from "react";
-import logo from "../../assets/img/Logo.svg";
-import { Icon } from "@iconify/react";
-import { NavLink } from "react-router-dom";
-import useLogout from "../../hooks/useLogout";
+import React from 'react';
+import logo from '../../assets/img/Logo.svg';
+import { Icon } from '@iconify/react';
+import { NavLink } from 'react-router-dom';
+import useLogout from '../../hooks/useLogout';
 
 // Fungsi ini untuk membuat komponen sidebar untuk admin
 export default function Sidebar() {
@@ -10,7 +10,7 @@ export default function Sidebar() {
 
   return (
     <div className="bg-white pt-8 flex flex-col px-5 h-full">
-      <NavLink to="/" className="flex flex-col mb-16">
+      <NavLink to="/tourplace" className="flex flex-col mb-16">
         <img src={logo} alt="logo" />
       </NavLink>
       <ul className="space-y-7 flex flex-col justify-center">
@@ -19,8 +19,8 @@ export default function Sidebar() {
             to="/tourplace"
             className={(param) =>
               param.isActive
-                ? "inline-flex justify-center items-center px-2 py-1 rounded-md text-blue-600 font-semibold"
-                : "inline-flex justify-center items-center px-2 py-1 rounded-md text-neutral-400 hover:text-blue-600"
+                ? 'inline-flex justify-center items-center px-2 py-1 rounded-md text-blue-600 font-semibold'
+                : 'inline-flex justify-center items-center px-2 py-1 rounded-md text-neutral-400 hover:text-blue-600'
             }
           >
             <Icon icon="tabler:smart-home" className="mr-1" />
@@ -32,8 +32,8 @@ export default function Sidebar() {
             to="/event"
             className={(param) =>
               param.isActive
-                ? "inline-flex justify-center items-center px-2 py-1 rounded-md text-blue-600 font-semibold"
-                : "inline-flex justify-center items-center px-2 py-1 rounded-md text-neutral-400 hover:text-blue-600"
+                ? 'inline-flex justify-center items-center px-2 py-1 rounded-md text-blue-600 font-semibold'
+                : 'inline-flex justify-center items-center px-2 py-1 rounded-md text-neutral-400 hover:text-blue-600'
             }
           >
             <Icon icon="tabler:calendar-event" className="mr-1" />
@@ -45,8 +45,8 @@ export default function Sidebar() {
             to="/input"
             className={(param) =>
               param.isActive
-                ? "inline-flex justify-center items-center px-2 py-1 rounded-md text-blue-600 font-semibold"
-                : "inline-flex justify-center items-center px-2 py-1 rounded-md text-neutral-400 hover:text-blue-600"
+                ? 'inline-flex justify-center items-center px-2 py-1 rounded-md text-blue-600 font-semibold'
+                : 'inline-flex justify-center items-center px-2 py-1 rounded-md text-neutral-400 hover:text-blue-600'
             }
           >
             <Icon icon="tabler:folder-plus" className="mr-1" />
@@ -58,8 +58,8 @@ export default function Sidebar() {
             to="/order"
             className={(param) =>
               param.isActive
-                ? "inline-flex justify-center items-center px-2 py-1 rounded-md text-blue-600 font-semibold"
-                : "inline-flex justify-center items-center px-2 py-1 rounded-md text-neutral-400 hover:text-blue-600"
+                ? 'inline-flex justify-center items-center px-2 py-1 rounded-md text-blue-600 font-semibold'
+                : 'inline-flex justify-center items-center px-2 py-1 rounded-md text-neutral-400 hover:text-blue-600'
             }
           >
             <Icon icon="tabler:clipboard-list" className="mr-1" />

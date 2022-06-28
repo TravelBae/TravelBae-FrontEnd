@@ -1,30 +1,30 @@
-import Layout from "../../components/Layout/Layout";
-import PageHead from "../../components/PageHead";
-import { Icon } from "@iconify/react";
-import SidebarOwner from "../../components/Sidebar/SidebarOwner";
-import useGetFullReport from "../../hooks/useGetFullReport";
-import ReactLoading from "react-loading";
+import Layout from '../../components/Layout/Layout';
+import PageHead from '../../components/PageHead';
+import { Icon } from '@iconify/react';
+import SidebarOwner from '../../components/Sidebar/SidebarOwner';
+import useGetFullReport from '../../hooks/useGetFullReport';
+import ReactLoading from 'react-loading';
 
 // Fungsi ini untuk membuat halaman homepage owner
 export default function HomeOwner() {
-  const pageName = [{ name: "Owner", url: "/" }, { name: "Homepage" }];
+  const pageName = [{ name: 'Owner', url: '/' }, { name: 'Homepage' }];
   const { fullReport, loading, error } = useGetFullReport();
 
-  const displayPrice = fullReport.total_sales?.toLocaleString("id-ID", {
-    style: "currency",
-    currency: "IDR",
+  const displayPrice = fullReport.total_sales?.toLocaleString('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
   });
 
   return (
     <>
-      <Layout sidebar={<SidebarOwner />} mainClassName={"bg-neutral-100"}>
+      <Layout sidebar={<SidebarOwner />} mainClassName={'bg-neutral-100'}>
         <div className="flex bg-white py-5 px-20">
           <PageHead items={pageName} />
         </div>
         {loading || error ? (
           <ReactLoading
-            type={"spinningBubbles"}
-            color={"#A7C0FF"}
+            type={'spinningBubbles'}
+            color={'#A7C0FF'}
             height={175}
             width={175}
             className="mx-auto mt-32"
@@ -63,7 +63,7 @@ export default function HomeOwner() {
                 >
                   <div>
                     <div
-                      class="h-12 w-12 rounded-xl justify-center place-items-center bg-green-100 inline-flex
+                      className="h-12 w-12 rounded-xl justify-center place-items-center bg-green-100 inline-flex
                   2xl:text-4xl 2xl:w-24 2xl:h-24
                   xl:text-3xl xl:w-20 xl:h-20
                   lg:text-2xl lg:w-16 lg:h-16
@@ -80,7 +80,7 @@ export default function HomeOwner() {
                       />
                     </div>
                   </div>
-                  <div class="justify-start">
+                  <div className="justify-start">
                     <p
                       className="text-md text-neutral-500
                   2xl:text-3xl
@@ -118,7 +118,7 @@ export default function HomeOwner() {
                 >
                   <div>
                     <div
-                      class="h-12 w-12 rounded-xl justify-center place-items-center bg-purple-100 inline-flex
+                      className="h-12 w-12 rounded-xl justify-center place-items-center bg-purple-100 inline-flex
                   2xl:text-4xl 2xl:w-24 2xl:h-24
                   xl:text-3xl xl:w-20 xl:h-20
                   lg:text-2xl lg:w-16 lg:h-16
@@ -135,7 +135,7 @@ export default function HomeOwner() {
                       />
                     </div>
                   </div>
-                  <div class="justify-start">
+                  <div className="justify-start">
                     <p
                       className="text-md text-neutral-500
                   2xl:text-3xl
@@ -178,7 +178,7 @@ export default function HomeOwner() {
                 >
                   <div>
                     <div
-                      class="h-12 w-12 rounded-xl justify-center place-items-center bg-sky-100 inline-flex
+                      className="h-12 w-12 rounded-xl justify-center place-items-center bg-sky-100 inline-flex
                   2xl:text-4xl 2xl:w-24 2xl:h-24
                   xl:text-3xl xl:w-20 xl:h-20
                   lg:text-2xl lg:w-16 lg:h-16
@@ -195,7 +195,7 @@ export default function HomeOwner() {
                       />
                     </div>
                   </div>
-                  <div class="justify-start">
+                  <div className="justify-start">
                     <p
                       className="text-md text-neutral-500
                   2xl:text-3xl
@@ -233,7 +233,7 @@ export default function HomeOwner() {
                 >
                   <div>
                     <div
-                      class="h-12 w-12 rounded-xl justify-center place-items-center bg-orange-100 inline-flex
+                      className="h-12 w-12 rounded-xl justify-center place-items-center bg-orange-100 inline-flex
                   2xl:text-4xl 2xl:w-24 2xl:h-24
                   xl:text-3xl xl:w-20 xl:h-20
                   lg:text-2xl lg:w-16 lg:h-16
@@ -250,7 +250,7 @@ export default function HomeOwner() {
                       />
                     </div>
                   </div>
-                  <div class="justify-start">
+                  <div className="justify-start">
                     <p
                       className="text-md text-neutral-500
                   2xl:text-3xl
